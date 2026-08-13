@@ -36,6 +36,9 @@
       background: #E0D6D5;
       padding: 22px 0;
       border-bottom: 1px solid rgba(47, 42, 38, 0.12);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     nav .container {
@@ -52,8 +55,9 @@
 
     .nav-links {
       display: flex;
-      gap: 25px;
+      gap: 24px;
       color: #5E5752;
+      font-size: 15px;
     }
 
     .nav-links a:hover {
@@ -90,14 +94,21 @@
     .hero h1 {
       font-size: clamp(55px, 8vw, 96px);
       line-height: 1.05;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
       color: #916848;
     }
 
     .hero-subtitle {
       font-size: 21px;
       color: #5C4A3D;
-      margin-bottom: 34px;
+      margin-bottom: 16px;
+    }
+
+    .hero-description {
+      max-width: 760px;
+      font-size: 17px;
+      color: #6B584A;
+      margin-bottom: 32px;
     }
 
     .social-buttons {
@@ -147,7 +158,7 @@
     }
 
     .about-text {
-      max-width: 820px;
+      max-width: 850px;
       font-size: 18px;
       color: #5F5650;
     }
@@ -162,6 +173,11 @@
       background: #AEC2C3;
     }
 
+    /* CERTIFICATIONS */
+    #certifications {
+      background: #D6CDCA;
+    }
+
     /* SKILLS */
     #skills {
       background: #8EA8A9;
@@ -170,7 +186,7 @@
     /* CARDS */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 22px;
     }
 
@@ -190,15 +206,42 @@
     .card h3 {
       margin-bottom: 10px;
       color: #3B3531;
+      font-size: 21px;
     }
 
     .card p {
       color: #665E58;
     }
 
-    .placeholder {
-      font-style: italic;
+    .tags {
+      margin-top: 16px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.48);
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      color: #514942;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 18px;
+      color: #916848;
+      font-weight: 700;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    .coming-soon {
       opacity: 0.7;
+      font-style: italic;
     }
 
     /* SKILLS */
@@ -224,7 +267,7 @@
       padding: 38px 0;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 760px) {
       .nav-links {
         display: none;
       }
@@ -237,6 +280,10 @@
         font-size: 18px;
       }
 
+      .hero-description {
+        font-size: 16px;
+      }
+
       .profile-photo {
         width: 140px;
         height: 140px;
@@ -244,6 +291,10 @@
 
       section {
         padding: 65px 0;
+      }
+
+      .section-heading {
+        font-size: 32px;
       }
     }
   </style>
@@ -254,18 +305,15 @@
   <!-- NAVIGATION -->
   <nav>
     <div class="container">
-
-      <div class="logo">
-        IMZ.
-      </div>
+      <div class="logo">IMZ.</div>
 
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#research">Research</a>
+        <a href="#certifications">Certifications</a>
         <a href="#skills">Skills</a>
       </div>
-
     </div>
   </nav>
 
@@ -280,12 +328,16 @@
         class="profile-photo"
       >
 
-      <h1>
-        Ismail Md Zani
-      </h1>
+      <h1>Ismail Md Zani</h1>
 
       <p class="hero-subtitle">
         Mathematics Undergraduate | Statistical Modelling | Big Data | Analyst
+      </p>
+
+      <p class="hero-description">
+        Mathematics undergraduate at Universiti Teknologi Malaysia with hands-on
+        experience in research, statistical modelling and data analysis,
+        currently expanding into big data and analytics.
       </p>
 
       <div class="social-buttons">
@@ -304,6 +356,12 @@
           LinkedIn
         </a>
 
+        <a
+          class="social-button"
+          href="mailto:ismailmdzani2@gmail.com">
+          Email
+        </a>
+
       </div>
 
     </div>
@@ -314,18 +372,17 @@
   <section id="about">
     <div class="container">
 
-      <p class="section-title">
-        About
-      </p>
+      <p class="section-title">About</p>
 
-      <h2 class="section-heading">
-        About Me
-      </h2>
+      <h2 class="section-heading">About Me</h2>
 
       <p class="about-text">
-        Mathematics undergraduate at Universiti Teknologi Malaysia with hands-on
-        experience in research, statistical modelling data analysis and
-        currently expanding into big data and analytics.
+        I am a Mathematics undergraduate at Universiti Teknologi Malaysia with
+        experience in quantitative research, statistical modelling, data analysis
+        and technical reporting. I enjoy working with data to identify patterns,
+        understand trends and communicate findings clearly. I am currently
+        strengthening my analytics skills through Excel, SQL, Power BI and
+        portfolio-based projects.
       </p>
 
     </div>
@@ -336,35 +393,129 @@
   <section id="projects">
     <div class="container">
 
-      <p class="section-title">
-        Projects
-      </p>
+      <p class="section-title">Projects</p>
 
-      <h2 class="section-heading">
-        Selected Projects
-      </h2>
+      <h2 class="section-heading">Selected Projects</h2>
 
       <div class="grid">
 
+        <!-- SQL PROJECT -->
         <div class="card">
-          <h3>SQL Portfolio Project</h3>
-          <p class="placeholder">
-            Project details will be added here.
+
+          <h3>SQL E-Commerce Analysis</h3>
+
+          <p>
+            Analysed a Brazilian e-commerce dataset to explore customer behaviour,
+            sales performance, product trends, revenue and freight costs.
           </p>
+
+          <div class="tags">
+            <span class="tag">SQL</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">DB Browser</span>
+            <span class="tag">Data Analysis</span>
+          </div>
+
+          <a
+            class="project-link"
+            href="https://github.com/ismailmdzani/SQL-Ecommerce-Analysis"
+            target="_blank">
+            View Project →
+          </a>
+
         </div>
 
+
+        <!-- EXCEL DASHBOARD -->
         <div class="card">
-          <h3>Excel Portfolio Project</h3>
-          <p class="placeholder">
-            Coming soon.
+
+          <h3>Excel Retail Analytics Dashboard</h3>
+
+          <p>
+            Built an interactive retail analytics dashboard using Excel, Power Query,
+            PivotTables, PivotCharts, KPIs and slicers to explore business performance
+            and present key insights.
           </p>
+
+          <div class="tags">
+            <span class="tag">Excel</span>
+            <span class="tag">Power Query</span>
+            <span class="tag">PivotTables</span>
+            <span class="tag">Dashboard</span>
+          </div>
+
+          <a
+            class="project-link"
+            href="https://github.com/ismailmdzani"
+            target="_blank">
+            View on GitHub →
+          </a>
+
         </div>
 
+
+        <!-- VBA PROJECT -->
         <div class="card">
-          <h3>Power BI Portfolio Project</h3>
-          <p class="placeholder">
-            Coming soon.
+
+          <h3>Excel VBA Timesheet Automation</h3>
+
+          <p>
+            Developed a macro-enabled Excel workflow to automate repetitive
+            timesheet-related tasks and demonstrate practical VBA automation.
           </p>
+
+          <div class="tags">
+            <span class="tag">Excel</span>
+            <span class="tag">VBA</span>
+            <span class="tag">Macros</span>
+            <span class="tag">Automation</span>
+          </div>
+
+          <a
+            class="project-link"
+            href="https://github.com/ismailmdzani"
+            target="_blank">
+            View on GitHub →
+          </a>
+
+        </div>
+
+
+        <!-- POWER BI -->
+        <div class="card">
+
+          <h3>Power BI Analytics Project</h3>
+
+          <p class="coming-soon">
+            Coming soon — currently expanding into Power BI, data modelling
+            and business intelligence.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Power BI</span>
+            <span class="tag">Data Modelling</span>
+            <span class="tag">Business Intelligence</span>
+          </div>
+
+        </div>
+
+
+        <!-- COMBINED PROJECT -->
+        <div class="card">
+
+          <h3>End-to-End Analytics Project</h3>
+
+          <p class="coming-soon">
+            Planned project combining Excel, SQL and Power BI in one complete
+            analytics workflow.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Excel</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Power BI</span>
+          </div>
+
         </div>
 
       </div>
@@ -377,35 +528,131 @@
   <section id="research">
     <div class="container">
 
-      <p class="section-title">
-        Research
-      </p>
+      <p class="section-title">Research</p>
 
-      <h2 class="section-heading">
-        Research & Publications
-      </h2>
+      <h2 class="section-heading">Research & Publications</h2>
+
+      <div class="grid">
+
+        <!-- RESEARCH ASSISTANT -->
+        <div class="card">
+
+          <h3>Undergraduate Research Assistant</h3>
+
+          <p>
+            Appointed under the Kurita Water and Environment Foundation, Japan,
+            Overseas Research Grant Program 2025 to conduct quantitative rainfall
+            trend research in Pahang.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Research</span>
+            <span class="tag">Polynomial Regression</span>
+            <span class="tag">RMSE</span>
+            <span class="tag">GNU Octave</span>
+          </div>
+
+        </div>
+
+
+        <!-- PUBLICATION -->
+        <div class="card">
+
+          <h3>First-Author Research Publication</h3>
+
+          <p>
+            First author of “Interpolating Rainfall Data Trends for Pahang Area
+            using Polynomial Regression”, analysing rainfall trends using
+            polynomial modelling and quantitative model evaluation.
+          </p>
+
+          <a
+            class="project-link"
+            href="https://semarakilmujournal.com.my/index.php/araset/article/view/292"
+            target="_blank">
+            View Publication →
+          </a>
+
+        </div>
+
+
+        <!-- AWARD -->
+        <div class="card">
+
+          <h3>Bronze Award — IWP-IRC 2026</h3>
+
+          <p>
+            Bronze Award recipient at Innovate, Write & Publish:
+            An International Research Challenge 2026 for research on
+            rainfall trend analysis using polynomial regression.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="container">
+
+      <p class="section-title">Certifications</p>
+
+      <h2 class="section-heading">Courses & Certifications</h2>
 
       <div class="grid">
 
         <div class="card">
-          <h3>Undergraduate Research</h3>
-          <p class="placeholder">
-            Research details will be added here.
+
+          <h3>Excel Skills for Business Specialization</h3>
+
+          <p>
+            Macquarie University — Coursera
           </p>
+
+          <a
+            class="project-link"
+            href="https://www.coursera.org/account/accomplishments/specialization/BBQSJ7E97SAD"
+            target="_blank">
+            View Credential →
+          </a>
+
         </div>
 
-        <div class="card">
-          <h3>Publication</h3>
-          <p class="placeholder">
-            Publication details will be added here.
-          </p>
-        </div>
 
         <div class="card">
-          <h3>Award</h3>
-          <p class="placeholder">
-            Award details will be added here.
+
+          <h3>Learn SQL Basics for Data Science</h3>
+
+          <p>
+            University of California, Davis — Coursera
           </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>Data Analytics for Organisation</h3>
+
+          <p>
+            Universiti Teknologi Malaysia
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>Microsoft Power BI Data Analyst</h3>
+
+          <p class="coming-soon">
+            In progress.
+          </p>
+
         </div>
 
       </div>
@@ -418,22 +665,25 @@
   <section id="skills">
     <div class="container">
 
-      <p class="section-title">
-        Skills
-      </p>
+      <p class="section-title">Skills</p>
 
-      <h2 class="section-heading">
-        Skills & Tools
-      </h2>
+      <h2 class="section-heading">Skills & Tools</h2>
 
       <div class="skills">
 
         <span class="skill">Microsoft Excel</span>
         <span class="skill">SQL</span>
+        <span class="skill">Power Query</span>
+        <span class="skill">PivotTables</span>
+        <span class="skill">Excel VBA</span>
         <span class="skill">Python</span>
         <span class="skill">GNU Octave</span>
+        <span class="skill">MATLAB</span>
         <span class="skill">Statistical Modelling</span>
+        <span class="skill">Polynomial Regression</span>
+        <span class="skill">RMSE</span>
         <span class="skill">Data Analysis</span>
+        <span class="skill">Data Visualisation</span>
         <span class="skill">Power BI</span>
 
       </div>
