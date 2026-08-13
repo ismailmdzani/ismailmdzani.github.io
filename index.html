@@ -67,12 +67,24 @@
       display: flex;
       align-items: center;
       text-align: center;
+      padding: 70px 0;
     }
 
     .hero .container {
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+
+    .profile-photo {
+      width: 170px;
+      height: 170px;
+      object-fit: cover;
+      object-position: center 30%;
+      border-radius: 50%;
+      margin-bottom: 28px;
+      border: 5px solid #E0D6D5;
+      box-shadow: 0 10px 30px rgba(47, 42, 38, 0.18);
     }
 
     .hero h1 {
@@ -163,11 +175,10 @@
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.55);
+      background: rgba(255, 255, 255, 0.58);
       border: 1px solid rgba(47, 42, 38, 0.12);
       border-radius: 18px;
       padding: 28px;
-      backdrop-filter: blur(4px);
       transition: 0.2s;
     }
 
@@ -226,6 +237,11 @@
         font-size: 18px;
       }
 
+      .profile-photo {
+        width: 140px;
+        height: 140px;
+      }
+
       section {
         padding: 65px 0;
       }
@@ -257,6 +273,12 @@
   <!-- HERO -->
   <header class="hero">
     <div class="container">
+
+      <img
+        src="profile.jpg"
+        alt="Ismail Md Zani"
+        class="profile-photo"
+      >
 
       <h1>
         Ismail Md Zani
