@@ -17,14 +17,13 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #EDE1D2;
       color: #2F2A26;
       line-height: 1.7;
     }
 
     a {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
     }
 
     .container {
@@ -34,8 +33,9 @@
 
     /* NAVIGATION */
     nav {
-      padding: 24px 0;
-      border-bottom: 1px solid #C9B7A4;
+      background: #E0D6D5;
+      padding: 22px 0;
+      border-bottom: 1px solid rgba(47, 42, 38, 0.12);
     }
 
     nav .container {
@@ -46,23 +46,24 @@
 
     .logo {
       font-size: 20px;
-      font-weight: bold;
+      font-weight: 700;
       letter-spacing: 1px;
     }
 
     .nav-links {
       display: flex;
       gap: 25px;
-      color: #6F665F;
+      color: #5E5752;
     }
 
     .nav-links a:hover {
-      color: #2F2A26;
+      color: #916848;
     }
 
     /* HERO */
     .hero {
-      min-height: 85vh;
+      min-height: 88vh;
+      background: #E7C3A9;
       display: flex;
       align-items: center;
       text-align: center;
@@ -75,57 +76,62 @@
     }
 
     .hero h1 {
-      font-size: clamp(52px, 8vw, 92px);
+      font-size: clamp(55px, 8vw, 96px);
       line-height: 1.05;
       margin-bottom: 22px;
-      font-weight: 700;
+      color: #916848;
     }
 
     .hero-subtitle {
       font-size: 21px;
-      color: #6F665F;
-      margin-bottom: 32px;
+      color: #5C4A3D;
+      margin-bottom: 34px;
     }
 
     .social-buttons {
       display: flex;
       gap: 14px;
-      flex-wrap: wrap;
       justify-content: center;
+      flex-wrap: wrap;
     }
 
     .social-button {
-      padding: 12px 22px;
-      border: 1px solid #B9A48F;
-      background: #F7F1EA;
-      border-radius: 8px;
-      transition: 0.2s;
+      background: #E0D6D5;
+      color: #2F2A26;
+      border: 1px solid rgba(47, 42, 38, 0.15);
+      padding: 12px 24px;
+      border-radius: 30px;
       font-weight: 600;
+      transition: 0.2s;
     }
 
     .social-button:hover {
-      background: #2F2A26;
-      color: #F7F1EA;
-      border-color: #2F2A26;
+      background: #916848;
+      color: white;
+      transform: translateY(-2px);
     }
 
-    /* GENERAL SECTION */
+    /* SECTIONS */
     section {
       padding: 90px 0;
-      border-top: 1px solid #C9B7A4;
     }
 
     .section-title {
       font-size: 14px;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: #8B7D71;
-      margin-bottom: 22px;
+      margin-bottom: 18px;
+      opacity: 0.7;
     }
 
     .section-heading {
-      font-size: 36px;
-      margin-bottom: 25px;
+      font-size: 38px;
+      margin-bottom: 26px;
+    }
+
+    /* ABOUT */
+    #about {
+      background: #E0D6D5;
     }
 
     .about-text {
@@ -134,61 +140,77 @@
       color: #5F5650;
     }
 
+    /* PROJECTS */
+    #projects {
+      background: #BCCCCB;
+    }
+
+    /* RESEARCH */
+    #research {
+      background: #AEC2C3;
+    }
+
+    /* SKILLS */
+    #skills {
+      background: #8EA8A9;
+    }
+
     /* CARDS */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
+      gap: 22px;
     }
 
     .card {
-      background: #F7F1EA;
-      border: 1px solid #D7C7B7;
-      border-radius: 14px;
-      padding: 26px;
+      background: rgba(255, 255, 255, 0.55);
+      border: 1px solid rgba(47, 42, 38, 0.12);
+      border-radius: 18px;
+      padding: 28px;
+      backdrop-filter: blur(4px);
       transition: 0.2s;
     }
 
     .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(47, 42, 38, 0.08);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(47, 42, 38, 0.10);
     }
 
     .card h3 {
       margin-bottom: 10px;
+      color: #3B3531;
     }
 
     .card p {
-      color: #6F665F;
+      color: #665E58;
     }
 
     .placeholder {
-      color: #8B7D71;
       font-style: italic;
-      margin-top: 8px;
+      opacity: 0.7;
     }
 
     /* SKILLS */
     .skills {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
     }
 
     .skill {
-      background: #F7F1EA;
-      border: 1px solid #D7C7B7;
-      padding: 9px 16px;
-      border-radius: 7px;
-      color: #514942;
+      background: #E0D6D5;
+      border: 1px solid rgba(47, 42, 38, 0.15);
+      color: #3A3532;
+      padding: 9px 17px;
+      border-radius: 30px;
     }
 
     /* FOOTER */
     footer {
+      background: #916848;
+      color: #F5ECE5;
       text-align: center;
-      padding: 40px 0;
-      color: #8B7D71;
-      border-top: 1px solid #C9B7A4;
+      padding: 38px 0;
     }
 
     @media (max-width: 700px) {
@@ -216,7 +238,10 @@
   <!-- NAVIGATION -->
   <nav>
     <div class="container">
-      <div class="logo">IMZ.</div>
+
+      <div class="logo">
+        IMZ.
+      </div>
 
       <div class="nav-links">
         <a href="#about">About</a>
@@ -224,6 +249,7 @@
         <a href="#research">Research</a>
         <a href="#skills">Skills</a>
       </div>
+
     </div>
   </nav>
 
@@ -232,7 +258,9 @@
   <header class="hero">
     <div class="container">
 
-      <h1>Ismail Md Zani</h1>
+      <h1>
+        Ismail Md Zani
+      </h1>
 
       <p class="hero-subtitle">
         Mathematics Undergraduate | Statistical Modelling | Big Data | Analyst
@@ -264,7 +292,9 @@
   <section id="about">
     <div class="container">
 
-      <p class="section-title">About</p>
+      <p class="section-title">
+        About
+      </p>
 
       <h2 class="section-heading">
         About Me
@@ -284,7 +314,9 @@
   <section id="projects">
     <div class="container">
 
-      <p class="section-title">Projects</p>
+      <p class="section-title">
+        Projects
+      </p>
 
       <h2 class="section-heading">
         Selected Projects
@@ -319,11 +351,13 @@
   </section>
 
 
-  <!-- RESEARCH / PUBLICATIONS -->
+  <!-- RESEARCH -->
   <section id="research">
     <div class="container">
 
-      <p class="section-title">Research</p>
+      <p class="section-title">
+        Research
+      </p>
 
       <h2 class="section-heading">
         Research & Publications
@@ -362,7 +396,9 @@
   <section id="skills">
     <div class="container">
 
-      <p class="section-title">Skills</p>
+      <p class="section-title">
+        Skills
+      </p>
 
       <h2 class="section-heading">
         Skills & Tools
